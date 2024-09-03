@@ -19,7 +19,7 @@
 
 $config = array(
 	// directories & files
-	'server_path' => '', // path to the server directory (same directory where config file is located)
+	'server_path' => 'C:/Users/minan/Documents/GitHub/canary', // path to the server directory (same directory where config file is located)
 
 	/**
 	 * Environment Setting
@@ -94,8 +94,8 @@ $config = array(
 	// account
 	'account_management' => true, // disable if you're using other method to manage users (fe. tfs account manager)
 	'account_login_by_email' => true, // use email instead of Account Name like in latest Tibia
-	'account_login_by_email_fallback' => false, // allow also additionally login by Account Name/Number (for users that might forget their email)
-	'account_create_auto_login' => false, // auto login after creating account?
+	'account_login_by_email_fallback' => true, // allow also additionally login by Account Name/Number (for users that might forget their email)
+	'account_create_auto_login' => true, // auto login after creating account?
 	'account_create_character_create' => true, // allow directly to create character on create account page?
 	'account_mail_verify' => false, // force users to confirm their email addresses when registering account
   'account_verified_only' => false, // force users to confirm their email to login in game
@@ -107,7 +107,7 @@ $config = array(
       'message' => 'You received %d %s for confirming your E-Mail address.' // example: You received 20 coins for confirming your E-Mail address.
   ],
 	'account_mail_unique' => true, // email addresses cannot be duplicated? (one account = one email)
-	'account_premium_days' => 0, // default premium days on new account
+	'account_premium_days' => 7, // default premium days on new account
 	'account_welcome_coins' => 0, // default coins on new account
 	'account_welcome_mail' => false, // send welcome email when user registers
     'account_welcome_mail_show_pass' => false, // send password in welcome email
@@ -155,8 +155,8 @@ $config = array(
 	'recaptcha_theme' => 'light', // light, dark
 
 	// e-mail senders
-	'send_mail_when_change_password' => true,	// send e-mail with new password when change password to account
-	'send_mail_when_generate_reckey' => true,	// send e-mail with rec key (key is displayed on page anyway when generate)
+	'send_mail_when_change_password' => false,	// send e-mail with new password when change password to account
+	'send_mail_when_generate_reckey' => false,	// send e-mail with rec key (key is displayed on page anyway when generate)
 
 	// genders (aka sex)
 	'genders' => array(
@@ -208,21 +208,11 @@ $config = array(
 		5 => 'AbDendriel',
 		6 => 'Carlin',
 		8 => 'Thais',
-		9 => 'Venore',
-		10 => 'Ankrahmun',
-		11 => 'Edron',
-		12 => 'Farmine',
-		13 => 'Darashia',
-		14 => 'Liberty Bay',
-		15 => 'Port Hope',
-		16 => 'Svargrond',
-		17 => 'Yalahar',
-		20 => 'Rathleton'
 	),
 
 	// guilds
 	'guild_management' => true, // enable guild management system on the site?
-	'guild_need_level' => 100, // min. level to form a guild
+	'guild_need_level' => 8, // min. level to form a guild
 	'guild_need_premium' => true, // require premium account to form a guild?
 	'guild_image_size_kb' => 80, // maximum size of the guild logo image in KB (kilobytes)
 	'guild_description_chars_limit' => 1000, // limit of guild description
@@ -233,14 +223,14 @@ $config = array(
 	'online_record' => true, // display players record?
 	'online_vocations' => false, // display vocation statistics?
 	'online_vocations_images' => false, // display vocation images?
-	'online_skulls' => true, // display skull images
+	'online_skulls' => false, // display skull images
 	'online_outfit' => true,
 	'online_afk' => false,
 
 	// support list page
 	'team_style' => 2, // 1/2 (1 - normal table, 2 - in boxes, grouped by group id)
 	'team_display_status' => true,
-	'team_display_lastlogin' => true,
+	'team_display_lastlogin' => false,
 	'team_display_world' => false,
 	'team_display_outfit' => true,
 
@@ -263,16 +253,16 @@ $config = array(
 	'characters' => array( // what things to display on character view page (true/false in each option)
 		'level' => true,
 		'experience' => true,
-		'magic_level' => true,
-		'balance' => true,
+		'magic_level' => false,
+		'balance' => false,
 		'marriage_info' => true, // only 0.3
 		'outfit' => true,
 		'creation_date' => true,
-		'quests' => true,
-		'skills' => true,
-		'equipment' => true,
-		'frags' => true,
-		'deleted' => false, // should deleted characters from same account be still listed on the list of characters? When enabled it will show that character is "[DELETED]"
+		'quests' => false,
+		'skills' => false,
+		'equipment' => false,
+		'frags' => false,
+		'deleted' => true, // should deleted characters from same account be still listed on the list of characters? When enabled it will show that character is "[DELETED]"
 	),
 	'quests' => array( // Canary Storages
 		'Demon Helmet' => 40077, // Storage.Quest.U6_4.DemonHelmet.Rewards.DemonHelmet
@@ -309,10 +299,10 @@ $config = array(
 	// status bar
 	'status_bar' => true,
 	'client_link' => 'https://github.com/dudantas/tibia-client/releases/tag/13.21.13839', // link to download tibia client
-	'discord_link' => 'https://discord.com/invite/gvTj5sh9Mp', // link to join discord channel
-	'whatsapp_link' => '5511912345678', // wa.me/5511912345678
-	'instagram_link' => 'profile', // www.instagram.com/profile
-	'facebook_link' => 'page', // www.facebook.com/page
+	'discord_link' => 'https://discord.gg/gwSdUASJM7', // link to join discord channel
+	'whatsapp_link' => 'https://chat.whatsapp.com/EQPvNtqkcBsBUx9h7BrYZI', // wa.me/5511912345678
+	//'instagram_link' => 'profile', // www.instagram.com/profile
+	//'facebook_link' => 'page', // www.facebook.com/page
 	'collapse_status' => true,
 
 	// events
@@ -332,13 +322,13 @@ $config = array(
 	'pace_color' => 'white', // black, blue, green, orange, pink, purple, red, silver, white, yellow
 
 	// char bazaar
-	'bazaar_create' => 50, // price to create auction
-	'bazaar_tax' => 12, // tax to bid
-	'bazaar_bid' => 50, // price to bid
+	'bazaar_create' => 5, // price to create auction
+	'bazaar_tax' => 1, // tax to bid
+	'bazaar_bid' => 10, // price to bid
 	'bazaar_accountid' => 1, // account id to move auction character
 
 	// gifts/shop system
-	'gifts_system' => true,
+	'gifts_system' => false,
 
 	// support/system
 	'bug_report' => true, // this configurable has no effect, its always enabled
